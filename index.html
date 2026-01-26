@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="SICFOUNDRY.COM – Premium domain for silicon carbide, semiconductor foundries, and AI hardware innovation. Available for acquisition.">
+<title>SICFOUNDRY.COM | Silicon Carbide Future</title>
+
+<!-- SEO & Social -->
+<meta property="og:title" content="SICFOUNDRY.COM – Silicon Carbide Domain Asset">
+<meta property="og:description" content="Premium semiconductor and SiC industry domain available for acquisition.">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<circle cx='50' cy='50' r='50' fill='%2300f0ff'/>
+<text x='50%' y='55%' font-size='45' text-anchor='middle' fill='black' font-family='Arial'>SiC</text>
+</svg>">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#050816;color:white;overflow-x:hidden}
+
+/* GRID */
+.grid{position:fixed;width:200%;height:200%;background-image:linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),linear-gradient(90deg, rgba(123,0,255,0.05) 1px, transparent 1px);background-size:70px 70px;animation:moveGrid 35s linear infinite;z-index:-3}
+@keyframes moveGrid{from{transform:translate(0,0)}to{transform:translate(-300px,-300px)}}
+
+/* GLOW ORBS */
+.glow{position:fixed;width:900px;height:900px;border-radius:50%;filter:blur(160px);z-index:-2}
+.glow.cyan{background:#00f0ff55;top:-200px;left:-200px}
+.glow.purple{background:#7b00ff55;bottom:-200px;right:-200px}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(40px);transition:1s;padding:60px 20px;}
+.hero.visible{opacity:1;transform:translateY(0);}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:64px;background:linear-gradient(90deg,#00f0ff,#7b00ff,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 25px #00f0ff}
+.hero p{max-width:760px;margin:25px auto;font-size:20px;color:#cfd8ff;opacity:0;transform:translateY(20px);transition:1s;}
+.hero p.visible{opacity:1;transform:translateY(0)}
+
+/* Buttons */
+.btn{display:inline-block;margin:12px;padding:16px 36px;border-radius:12px;font-weight:600;text-decoration:none;color:white;background:linear-gradient(90deg,#00f0ff,#7b00ff);box-shadow:0 0 25px #00f0ff,0 0 45px #7b00ff;transition:.3s;opacity:0;transform:translateY(20px);transition:0.6s;}
+.btn.visible{opacity:1;transform:translateY(0);}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 45px #00f0ff,0 0 80px #7b00ff}
+
+/* Popup Overlay */
+#offerPopup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;justify-content:center;align-items:center;z-index:999;opacity:0;pointer-events:none;transition:0.4s}
+#offerPopup.visible{opacity:1;pointer-events:auto}
+#offerPopup .popup-content{background:linear-gradient(145deg,#0b1229,#0f1a3f);padding:40px;border-radius:20px;max-width:450px;width:90%;text-align:center;position:relative;box-shadow:0 0 60px #7b00ff88}
+#offerPopup h3{color:#00f0ff;margin-bottom:20px;font-family:'Orbitron',sans-serif;}
+#offerPopup input, #offerPopup textarea{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:none;background:#111a2f;color:white;font-size:16px;}
+#offerPopup button{margin-top:12px;padding:14px 32px;border-radius:12px;font-weight:600;background:linear-gradient(90deg,#00f0ff,#7b00ff);color:white;border:none;cursor:pointer;box-shadow:0 0 25px #00f0ff,0 0 45px #7b00ff;}
+#offerPopup .closeBtn{position:absolute;top:10px;right:15px;font-size:22px;color:#fff;cursor:pointer}
+
+/* SECTION */
+.section{padding:120px 10%;text-align:center}
+.section h2{font-family:'Orbitron',sans-serif;font-size:42px;color:#00f0ff;margin-bottom:40px;opacity:0;transform:translateY(20px);transition:0.6s}
+.section h2.visible{opacity:1;transform:translateY(0)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.card{background:linear-gradient(145deg,#0b1229,#0f1a3f);padding:40px;border-radius:20px;border:1px solid #1f2b5a;box-shadow:0 0 35px #00f0ff22;transition:.4s;opacity:0;transform:translateY(20px)}
+.card.visible{opacity:1;transform:translateY(0)}
+.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 0 60px #7b00ff88}
+.card h3{color:#7b00ff;margin-bottom:15px}
+
+/* Footer */
+.footer{text-align:center;padding:50px;color:#aaa;border-top:1px solid #111a3a}
+
+/* Canvas Particles */
+canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-4}
+
+/* Mobile */
+@media(max-width:768px){.hero h1{font-size:42px}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+<div class="grid"></div>
+<div class="glow cyan"></div>
+<div class="glow purple"></div>
+
+<section class="hero" id="hero">
+  <h1>SICFOUNDRY.COM</h1>
+  <p>The strategic digital asset for Silicon Carbide innovation, semiconductor manufacturing, and next-generation AI hardware industries.</p>
+  <a href="mailto:hassamizos@gmail.com" class="btn visible">📩 Acquire This Domain</a>
+  <a href="https://wa.me/212660284635" class="btn visible">💬 WhatsApp Contact</a>
+  <a href="#" class="btn visible" id="openPopup">💰 Send Offer</a>
+</section>
+
+<section class="section" id="section1">
+  <h2>Industry-Defining Digital Asset</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Exact Market Authority</h3>
+      <p>Aligned with Silicon Carbide foundries and advanced semiconductor production.</p>
+    </div>
+    <div class="card">
+      <h3>Future Tech Positioning</h3>
+      <p>Perfect for AI chips, EV systems, and high-efficiency materials innovation.</p>
+    </div>
+    <div class="card">
+      <h3>Global Investment Signal</h3>
+      <p>A category-leading brand in a billion-dollar industrial ecosystem.</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  © 2026 SICFOUNDRY.COM — Premium Domain Available for Acquisition
+</div>
+
+<!-- Popup Form -->
+<div id="offerPopup">
+  <div class="popup-content">
+    <span class="closeBtn" id="closePopup">&times;</span>
+    <h3>Send Your Offer</h3>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="offer" placeholder="Your Offer" rows="4" required></textarea>
+    <button id="submitOffer">Send Offer</button>
+  </div>
+</div>
+
+<script>
+// Canvas particles + connections
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<120;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    vx:(Math.random()-.5)*0.7,
+    vy:(Math.random()-.5)*0.7,
+    size:Math.random()*2
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle="#00f0ff";
+  particles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    ctx.fill();
+  });
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      let dx=particles[i].x-particles[j].x;
+      let dy=particles[i].y-particles[j].y;
+      let dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120){
+        ctx.strokeStyle="rgba(0,240,255,"+(1-dist/120)+")";
+        ctx.lineWidth=0.5;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {if(entry.isIntersecting){entry.target.classList.add('visible');}});
+},{threshold:0.1});
+
+document.querySelectorAll('.hero, .hero p, .btn, .section h2, .card').forEach(el => observer.observe(el));
+
+// Popup logic
+const popup = document.getElementById('offerPopup');
+document.getElementById('openPopup').onclick = e => {e.preventDefault(); popup.classList.add('visible');}
+document.getElementById('closePopup').onclick = () => popup.classList.remove('visible');
+
+// Send offer (opens mail client)
+document.getElementById('submitOffer').onclick = () => {
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const offer=document.getElementById('offer').value;
+  if(!name||!email||!offer){alert("Please fill all fields"); return;}
+  window.location.href=`mailto:hassamizos@gmail.com?subject=Offer for SICFOUNDRY.COM&body=Name: ${name}%0AEmail: ${email}%0AOffer: ${offer}`;
+}
+window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight});
+</script>
+
+</body>
+</html>
